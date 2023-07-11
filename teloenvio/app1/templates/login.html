@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block contenido %}
+{% load static %}
+<div class="row justify-content-center p-2">
+  <div class="col-sm-3">
+
+    <div class="card">
+
+
+      <div class="card-header text-center" style="background-color: #00D879; color: white;">   <img src="{% static '/img/logo4.png' %}" alt="" width="220px"></div>
+
+      <div class="card-body">
+        <form method="POST">
+          <div id="contenedor_img">
+          
+          </div>
+
+          {% csrf_token %}
+          {{ formulario }}
+          <br>
+          <button type="submit" class="btn btn-warning">Login</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
+{% endblock %}
